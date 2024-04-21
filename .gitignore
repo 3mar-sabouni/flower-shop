@@ -1,0 +1,43 @@
+# Byte-compiled / optimized python files
+__pycache__/
+*.pyc
+
+# Odoo specific
+__pycache__/
+*.py[co]
+*.bak
+*~
+
+# Compiled Python files
+*.pyc
+
+# SQLite database file
+*.sqlite
+
+# Odoo generated files
+*.pyc
+*.pyo
+*.pyc
+*.orig
+*.swp
+*~
+*.orig
+*.rej
+*~
+
+# Log files
+logs/
+*.log
+
+# Compiled translations
+*.mo
+*.pot
+
+# Database dumps
+dump.sql
+
+# Editor specific files
+.vscode/
+.idea/
+
+# Add your own custom exclusions below:
