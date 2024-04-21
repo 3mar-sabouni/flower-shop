@@ -11,10 +11,11 @@
     'website': "",
     'category': 'Uncategorized',
     'version': '17.0.0.1',
-    'depends': ['base'],
+    'depends': ['base','sale'],
     'data': [
         'security/ir.model.access.csv',
-        'views/flower_flower_views.xml'
+        'views/flower_flower_views.xml',
+        'views/product_product_views.xml'
     ],
     'demo': [
     ],
