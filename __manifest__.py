@@ -19,6 +19,7 @@
         'views/product_product_views.xml',
         'views/template_product_inhert.xml',
         'views/stock_production_lot_inhert.xml',
+        'reports/flower_sale_order_views.xml',
         ],
     'demo': [
     ],
