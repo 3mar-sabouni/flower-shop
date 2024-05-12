@@ -91,14 +91,14 @@ class Warehouse(models.Model):
                         current_day_forecast.append(entry)
 
                 # Check rain volume and water flowers if necessary
-                watering_needed = False
+                is_watered = False
                 for entry in current_day_forecast[:4]:
                     rain_volume = entry.get('rain', {}).get('3h', 0)
                     print(rain_volume)
                     if rain_volume > 0.2:
-                        watering_needed = True
+                        is_watered = True
                         break
-                if watering_needed:
+                if is_watered:
                     flower_stocks = StockQuant.search([
                         ('location_id', '=', warehouse.lot_stock_id.id),
                         ('lot_id', '!=', False),
