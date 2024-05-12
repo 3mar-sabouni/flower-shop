@@ -11,7 +11,7 @@ class StockProductionLot(models.Model):
     def create(self, vals_list):
         for vals in vals_list:
             product = self.env["product.product"].browse(vals["product_id"])
-            if product.sequence_id:
+            if product.sequence_id and product.is_flower:
                 vals["name"] = product.sequence_id.next_by_id()
         return super().create(vals_list)
     
