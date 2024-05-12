@@ -2,7 +2,7 @@
 {
     'name': "flower shop",
 
-    'summary': "",
+    'summary': "module seamlessly manages flower specifications, watering schedules, and integrates with a Weather API for real-time data.",
 
     'description': """
     """,
