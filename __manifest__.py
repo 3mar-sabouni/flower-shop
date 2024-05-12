@@ -27,7 +27,5 @@
         'data/ir_actions_server.xml',
         'data/ir_config_parameter_data.xml'
         ],
-    'demo': [
-    ],
 }
 
