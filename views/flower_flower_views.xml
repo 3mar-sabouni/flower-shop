@@ -1,0 +1,57 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="flower_shop.flower_flower_list_view">
+      <field name="name">flower list</field>
+      <field name="model">flower.flower</field>
+      <field name="arch" type="xml">
+        <tree>
+            <field name="name"/>
+            <field name="scientific_name"/>
+            <field name="watering_frequency"/>       
+            <field name="watering_amount"/>
+            <field name="season_start"/>
+            <field name="season_end"/>  
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="flower_shop.flower_flower_form_view">
+      <field name="name">flower form</field>
+      <field name="model">flower.flower</field>
+      <field name="arch" type="xml">
+        <form>
+            <sheet>
+                <group>
+                <group>
+                    <field name="name"/>
+                    <field name="scientific_name"/>
+                    <field name="watering_frequency"/>       
+                    <field name="watering_amount"/>       
+                </group>
+                <group>
+                    <field name="season_start"/>
+                    <field name="season_end"/>
+                </group>
+            </group>
+            </sheet>
+          
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="flower_shop.flower_shop_action_window">
+      <field name="name">Flowers</field>
+      <field name="res_model">flower.flower</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <menuitem name="Flowers" id="flower_shop.menu_root" action="flower_shop_action_window"
+        web_icon="module_name,static/description/icon.png"/>
+
+    <menuitem name="Flowers" id="flower_shop.flowers_items" parent="flower_shop.menu_root" action="flower_shop.flower_shop_action_window" />
+    <menuitem name="Watering" id="flower_shop.watering_records" parent="flower_shop.menu_root" action="flower_shop.flower_water_action_window"/>
+  
+  </data>
+</odoo>
